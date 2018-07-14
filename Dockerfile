@@ -19,5 +19,3 @@ VOLUME /root/.aws
 VOLUME /aws
 
 WORKDIR /aws
-
-CMD ["aws"]
