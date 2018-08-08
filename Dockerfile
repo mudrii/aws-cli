@@ -1,7 +1,7 @@
 FROM alpine:latest
 
 # Version https://github.com/aws/aws-cli/releases
-ENV AWS_CLI_VERSION 1.15.55
+ENV AWS_CLI_VERSION 1.15.73
 
 RUN apk --no-cache update && \
     apk --no-cache add \
