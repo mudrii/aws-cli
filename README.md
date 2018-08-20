@@ -2,7 +2,7 @@
 
 Check the latest version on
 
-[](https://github.com/aws/aws-cli/releases)
+[Version](https://github.com/aws/aws-cli/releases)
 
 Add aliase
 
