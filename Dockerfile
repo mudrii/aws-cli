@@ -1,7 +1,11 @@
 FROM alpine:latest
 
+RUN deluser guest ; delgroup users
+RUN addgroup -g 985 -S users
+RUN adduser -S -G users -u 1000 -s /bin/sh -h /home/mudrii mudrii
+
 # Version https://github.com/aws/aws-cli/releases
-ENV AWS_CLI_VERSION 1.15.81
+ENV AWS_CLI_VERSION 1.16.10
 
 RUN apk --no-cache update && \
     apk --no-cache add \
@@ -15,7 +19,9 @@ RUN apk --no-cache update && \
     apk --purge del py-pip && \
     rm /var/cache/apk/*
 
-VOLUME /root/.aws
-VOLUME /aws
+USER mudrii
 
-WORKDIR /aws
+#VOLUME /mudrii/.aws
+#VOLUME /aws
+
+#WORKDIR /aws
