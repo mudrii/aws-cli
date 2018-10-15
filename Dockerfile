@@ -1,4 +1,4 @@
-from alpine:latest
+From alpine:latest
 
 RUN deluser guest ; delgroup users
 RUN addgroup -g 985 -S users
@@ -15,9 +15,9 @@ RUN apk --no-cache update && \
     less \
     mailcap \
     jq && \
+		pip install --upgrade pip && \
     pip --no-cache-dir install --upgrade awscli==${AWS_CLI_VERSION} && \
-    apk --purge del py-pip && \
-    rm /var/cache/apk/*
+    apk --purge del py-pip 
 
 USER mudrii
 
