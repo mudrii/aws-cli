@@ -1,4 +1,4 @@
-from ALpine:latest
+from alpine:latest
 
 RUN deluser guest ; delgroup users
 RUN addgroup -g 985 -S users
