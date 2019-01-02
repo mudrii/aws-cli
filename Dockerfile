@@ -5,7 +5,7 @@ RUN addgroup -g 985 -S users
 RUN adduser -S -G users -u 1000 -s /bin/sh -h /home/mudrii mudrii
 
 # Version https://github.com/aws/aws-cli/releases
-ENV AWS_CLI_VERSION 1.16.61 
+ENV AWS_CLI_VERSION 1.16.81 
 
 RUN apk --no-cache update && \
     apk --no-cache add \
